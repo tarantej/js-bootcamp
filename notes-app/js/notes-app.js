@@ -16,6 +16,26 @@ const tasks = [{
         remarks: 'None'
     },
 
+    {
+        date: '22/04/2022',
+        task: 'Meeting with Ellie and Carter',
+        client: 'NA',
+        assigned_by: 'Ellie',
+        description: 'First Meeting',
+        time_taken: '1 Hour',
+        remarks: 'None'
+    },
+
+    {
+        date: '28/04/2022',
+        task: 'Meeting with Ellie and Carter',
+        client: 'NA',
+        assigned_by: 'Ellie',
+        description: 'First Meeting',
+        time_taken: '1 Hour',
+        remarks: 'None'
+    },
+
 ]
 
 // Query the DOM
@@ -32,14 +52,19 @@ para.forEach(function(p) {
 
 // Create a new task list ul
 
-tasks.forEach(function() {
-    const newTaskList = document.createElement('ul')
+const newTaskList = document.createElement('ul')
+
+tasks.forEach(function(taskContent) {
+
     const newTask = document.createElement('li')
-    const taskNode = document.createTextNode('New Task Item')
-    newTask.appendChild(taskNode)
+    newTask.textContent = taskContent.date
+        // const taskNode = document.createTextNode('New Task Item')
+        // newTask.appendChild(taskNode)
     newTaskList.appendChild(newTask)
-    document.querySelector('body').appendChild(newTaskList)
+
 })
+
+document.querySelector('body').appendChild(newTaskList)
 
 
 

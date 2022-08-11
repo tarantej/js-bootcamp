@@ -28,3 +28,5 @@ document.querySelector('body').appendChild(newParagraph) // creates a new paragr
 // Event - An event is something that the user does
 
 // Event Listener - a function that responds to the occurence of an event
+
+// Input event listener for text input  - for creating text filters

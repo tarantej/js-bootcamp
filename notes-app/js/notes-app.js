@@ -19,24 +19,17 @@ para.forEach(function(p) {
 })
 
 
-
-
-
-
-
 // Add Click event for button
 
 const btnTest = document.getElementById('addNote')
-btnTest.addEventListener("click", function (){
+btnTest.addEventListener("click", function() {
     // console.log('hi')
 
     // Add a new element
-        const newParagraph = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
-        newParagraph.textContent = 'This is a new element from Javascript'
-        document.querySelector('body').appendChild(newParagraph) // creates a new paragraph in the body and puts in the text content
+    const newParagraph = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
+    newParagraph.textContent = 'This is a new element from Javascript'
+    document.querySelector('body').appendChild(newParagraph) // creates a new paragraph in the body and puts in the text content
 });
-
-
 
 
 

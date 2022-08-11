@@ -1,6 +1,6 @@
 // Arrays
 
-// Create an array with 5 todos
+// Create an array with 5 items
 // Print message with array length. Ex - You have X items to do in your list
 // Print first and second to last items
 // Delete the third item
@@ -28,3 +28,4 @@
 // Change notes to Tasks and loop them in the project
 // Show remaining tasks todo via p element
 // Add a p element for each for the tasks
+// Create a button that accepts input from the user and shows the result on button click

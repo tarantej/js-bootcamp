@@ -37,11 +37,18 @@ const newTaskList = document.createElement('ul')
 tasks.forEach(function(taskContent) {
 
     const newTask = document.createElement('li')
-    newTask.textContent = taskContent.date
-        // const taskNode = document.createTextNode('New Task Item')
-        // newTask.appendChild(taskNode)
+    // newTask.textContent = taskContent.date
+    // const taskNode = document.createTextNode('New Task Item')
+    // newTask.appendChild(taskNode)
     newTaskList.appendChild(newTask)
 
 })
 
 document.querySelector('body').appendChild(newTaskList)
+
+// Create new task on click of button
+
+const addNewTask = document.getElementById('addTask')
+addNewTask.addEventListener('click', function(){
+    
+})

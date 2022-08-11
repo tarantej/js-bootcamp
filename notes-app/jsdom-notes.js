@@ -25,6 +25,6 @@ document.querySelector('body').appendChild(newParagraph) // creates a new paragr
 
 //  Event Handlers
 
-// An event is something that the user does
+// Event - An event is something that the user does
 
 // Event Listener - a function that responds to the occurence of an event

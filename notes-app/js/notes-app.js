@@ -19,11 +19,6 @@ para.forEach(function(p) {
 })
 
 
-
-
-
-
-
 // Add Click event for button
 
 const btnTest = document.getElementById('addNoteTest')
@@ -31,12 +26,11 @@ btnTest.addEventListener("click", function (){
     // console.log('hi')
 
     // Add a new element
-        const newParagraph = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
-        newParagraph.textContent = 'This is a new element from Javascript'
-        document.querySelector('body').appendChild(newParagraph) // creates a new paragraph in the body and puts in the text content
+    const newParagraph = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
+    newParagraph.textContent = 'This is a new element from Javascript'
+    document.querySelector('body').appendChild(newParagraph) // creates a new paragraph in the body and puts in the text content
 });
 
-// Add Submit event listener for adding notes via input text
 
 document.getElementById('AddNoteForm').addEventListener('submit',function(addNoteEvent){
     // Prevent default behaviour of submite on button click
@@ -45,8 +39,6 @@ document.getElementById('AddNoteForm').addEventListener('submit',function(addNot
     console.log(addNoteEvent.target.elements.AddNoteInput.value)
     // alert('Form Submitted')
 })
-
-
 
 
 

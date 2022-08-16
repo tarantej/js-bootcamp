@@ -29,3 +29,12 @@
 // Show remaining tasks todo via p element
 // Add a p element for each for the tasks
 // Create a button that accepts input from the user and shows the result on button click
+// Create a form to enable users to add tasks by accepting input from them and then showing a list of tasks after clicking on submit
+// Convert list of tasks to checkbox items
+// Add a feature to filter the tasks from the list
+// Create a checkbox and setup event listener -> "Hide Completed"
+// Create new hideCompleted filter (default false)
+// Update hideCompleted and re-order the list on checkbox change
+// Setup RenderTasks to remove completed items
+// Toggle tasks order via button
+// Add a feature to sort tasks via dropdown

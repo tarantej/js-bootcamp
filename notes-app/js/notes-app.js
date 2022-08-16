@@ -45,3 +45,9 @@ document.getElementById('AddNoteForm').addEventListener('submit',function(addNot
 // Change notes to Tasks and loop them in the project - done 1 example
 // Show remaining tasks todo via li element
 // Add a li element for each for the tasks
+// convert li elements to checkboxes
+
+// Create a checkbox and setup event listener -> "Hide Completed"
+// Create new hideCompleted filter (default false)
+// Update hideCompleted and re-order the list on checkbox change
+// Setup RenderTasks to remove completed items

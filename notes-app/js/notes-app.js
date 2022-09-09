@@ -21,23 +21,49 @@ para.forEach(function(p) {
 
 // Add Click event for button
 
-const btnTest = document.getElementById('addNoteTest')
-btnTest.addEventListener("click", function (){
-    // console.log('hi')
+// const btnTest = document.getElementById('addNote')
+// btnTest.addEventListener("click", function (){
+//     // console.log('hi')
 
-    // Add a new element
-    const newParagraph = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
-    newParagraph.textContent = 'This is a new element from Javascript'
-    document.querySelector('body').appendChild(newParagraph) // creates a new paragraph in the body and puts in the text content
-});
+//     // Add a new element
+//     // const newParagraph = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
+//     // newParagraph.textContent = 'This is a new element from Javascript'
+//     // document.querySelector('body').appendChild(newParagraph) // creates a new paragraph in the body and puts in the text content
+// });
 
+
+// Add Notes via form
 
 document.getElementById('AddNoteForm').addEventListener('submit',function(addNoteEvent){
-    // Prevent default behaviour of submite on button click
+    // Prevent default behaviour of submit on button click
     addNoteEvent.preventDefault()
+
     // Show input box value
-    console.log(addNoteEvent.target.elements.AddNoteInput.value)
-    // alert('Form Submitted')
+
+    const newNoteText = addNoteEvent.target.elements.AddNoteInput.value
+    const newNote = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
+
+    // Add a class to the newly created element
+    newNote.classList.add('notes')
+
+    // New element has the textContent from the input
+    newNote.textContent = newNoteText
+
+    // Show the newly created element
+    document.querySelector('body').appendChild(newNote) // creates a new paragraph in the body and puts in the text content
+
+})
+
+// Remove notes
+
+document.querySelector('#removeNotes').addEventListener('click',function(removeNotesEvent){
+    removeNotesEvent.preventDefault();
+
+    // Ask user for confirmation before deleting the notes
+
+    if (confirm("This will delete all the notes. Are you sure ?")) {
+        console.log('notes removed')
+    }
 })
 
 

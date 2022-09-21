@@ -41,20 +41,7 @@ document.getElementById('AddNoteForm').addEventListener('submit',function(addNot
     // Show input box value
 
     const newNoteText = addNoteEvent.target.elements.AddNoteInput.value
-
-    // Change p to checkbox
-    const newNote = document.createElement('input')
-    newNote.type = 'checkbox';
-    newNote.id = 'noteCheck';
-    newNote.name = 'noteCheck';
-    newNote.value = newNoteText;
-
-    const noteLabel = document.createElement('label')
-    noteLabel.htmlFor = newNoteText;
-    noteLabel.appendChild(document.createTextNode(newNoteText));
-
-    const br = document.createElement('br');
- 
+    const newNote = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
 
     // Add a class to the newly created element
     newNote.classList.add('notes')
@@ -63,26 +50,7 @@ document.getElementById('AddNoteForm').addEventListener('submit',function(addNot
     newNote.textContent = newNoteText
 
     // Show the newly created element
-    const container = document.querySelector('body')
-    container.appendChild(newNote) // creates a new checkbox in the body and puts in the text content
-    container.appendChild(noteLabel);
-    container.appendChild(br);
-
-    // const carCheck = document.createElement('input');
-    // carCheck.type = 'checkbox';
-    // carCheck.id = 'car';
-    // carCheck.name = 'interest';
-    // carCheck.value = 'car';
- 
-    // const carLabel = document.createElement('label')
-    // carLabel.htmlFor = 'car';
-    // carLabel.appendChild(document.createTextNode('Car'));
- 
-    
-    // const container = document.querySelector('body');
-    // container.appendChild(carCheck);
-    // container.appendChild(carLabel);
-    // container.appendChild(br);
+    document.querySelector('body').appendChild(newNote) // creates a new paragraph in the body and puts in the text content
 
 })
 
@@ -94,30 +62,18 @@ document.querySelector('#removeNotes').addEventListener('click',function(removeN
     // Ask user for confirmation before deleting the notes
 
     if (confirm("This will delete all the notes. Are you sure ?")) {
-        document.querySelectorAll('.notes').forEach(function(note){
-            // console.log(note.textContent)
-            note.remove();
-        })
-
+        console.log('notes removed')
     }
 })
 
-// Event handler for dropdown select (Notes status)
-
-document.querySelector('#filter-notes').addEventListener('change',function(noteStatusEvent){
-    noteStatusEvent.preventDefault();
-    console.log(noteStatusEvent.target.value)
-})
 
 
-
-
-
-
-// Create a form with a single input - done
-// Setup a submit hadnleer and disable the default action - done
-// Add a new item to the array and re-render the application
-// Add a li element for each for the notes
-// convert li elements to checkboxes
-// Change notes to Tasks and loop them in the project
+// Change notes to Tasks and loop them in the project - done 1 example
 // Show remaining tasks todo via li element
+// Add a li element for each for the tasks
+// convert li elements to checkboxes
+
+// Create a checkbox and setup event listener -> "Hide Completed"
+// Create new hideCompleted filter (default false)
+// Update hideCompleted and re-order the list on checkbox change
+// Setup RenderTasks to remove completed items

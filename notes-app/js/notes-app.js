@@ -66,7 +66,10 @@ document.querySelector('#removeNotes').addEventListener('click',function(removeN
     }
 })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 6ef2449 (-Added checkbox to notes)
 
 // Change notes to Tasks and loop them in the project - done 1 example
 // Show remaining tasks todo via li element

@@ -41,7 +41,20 @@ document.getElementById('AddNoteForm').addEventListener('submit',function(addNot
     // Show input box value
 
     const newNoteText = addNoteEvent.target.elements.AddNoteInput.value
-    const newNote = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
+    //  const newNote = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
+
+    // Change p to checkbox
+    const newNote = document.createElement('input')
+    newNote.type = 'checkbox';
+    newNote.id = 'noteCheck';
+    newNote.name = 'noteCheck';
+    newNote.value = newNoteText;
+
+    const noteLabel = document.createElement('label')
+    noteLabel.htmlFor = newNoteText;
+    noteLabel.appendChild(document.createTextNode(newNoteText));
+    
+    const br = document.createElement('br');
 
     // Add a class to the newly created element
     newNote.classList.add('notes')
@@ -51,6 +64,28 @@ document.getElementById('AddNoteForm').addEventListener('submit',function(addNot
 
     // Show the newly created element
     document.querySelector('body').appendChild(newNote) // creates a new paragraph in the body and puts in the text content
+    container.appendChild(newNote) // creates a new checkbox in the body and puts in the text content
+    container.appendChild(noteLabel);
+    container.appendChild(br);
+
+    // Creating labels for checkboxes
+
+    // const carCheck = document.createElement('input');
+    // carCheck.type = 'checkbox';
+    // carCheck.id = 'car';
+    // carCheck.name = 'interest';
+    // carCheck.value = 'car';
+ 
+    // const carLabel = document.createElement('label')
+    // carLabel.htmlFor = 'car';
+    // carLabel.appendChild(document.createTextNode('Car'));
+ 
+    
+    // const container = document.querySelector('body');
+    // container.appendChild(carCheck);
+    // container.appendChild(carLabel);
+    // container.appendChild(br);
+
 
 })
 
@@ -66,10 +101,13 @@ document.querySelector('#removeNotes').addEventListener('click',function(removeN
     }
 })
 
-<<<<<<< HEAD
+// Event handler for dropdown select (Notes status)
 
-=======
->>>>>>> parent of 6ef2449 (-Added checkbox to notes)
+document.querySelector('#filter-notes').addEventListener('change',function(noteStatusEvent){
+    noteStatusEvent.preventDefault();
+    console.log(noteStatusEvent.target.value)
+})
+
 
 // Change notes to Tasks and loop them in the project - done 1 example
 // Show remaining tasks todo via li element

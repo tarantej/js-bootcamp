@@ -46,10 +46,10 @@
             <!-- <button class="btn btn-primary" id="addNoteTest" name="addNoteTest">Add Note</button> -->
             <!-- Add Form input -->
             <form id="AddNoteForm">
-                <select>
-                    <option name="optAll">Show All Notes</option>
-                    <option name="optPending">Show Pending Notes</option>
-                    <option name="optCompleted">Show Completed Notes</option>
+                <select id="filter-notes" name="filter-notes">
+                    <option name="optAll" value="allNotes">Show All Notes</option>
+                    <option name="optPending" value="pendingNotes">Show Pending Notes</option>
+                    <option name="optCompleted" value="completedNotes">Show Completed Notes</option>
                 </select>
                 <p></p>
                 <input id="AddNoteInput" name = "AddNoteInput" type="text" placeholder="Add Note" />

@@ -102,6 +102,13 @@ document.querySelector('#removeNotes').addEventListener('click',function(removeN
     }
 })
 
+// Event handler for dropdown select (Notes status)
+
+document.querySelector('#filter-notes').addEventListener('change',function(noteStatusEvent){
+    noteStatusEvent.preventDefault();
+    console.log(noteStatusEvent.target.value)
+})
+
 
 
 

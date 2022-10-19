@@ -30,3 +30,21 @@ document.querySelector('body').appendChild(newParagraph) // creates a new paragr
 // Event Listener - a function that responds to the occurence of an event
 
 // Input event listener for text input  - for creating text filters
+
+// Creating labels for checkboxes
+
+// const carCheck = document.createElement('input');
+// carCheck.type = 'checkbox';
+// carCheck.id = 'car';
+// carCheck.name = 'interest';
+// carCheck.value = 'car';
+
+// const carLabel = document.createElement('label')
+// carLabel.htmlFor = 'car';
+// carLabel.appendChild(document.createTextNode('Car'));
+
+
+// const container = document.querySelector('body');
+// container.appendChild(carCheck);
+// container.appendChild(carLabel);
+// container.appendChild(br);

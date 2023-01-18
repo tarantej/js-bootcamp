@@ -1,10 +1,10 @@
 // Objects in Array
 
-const notes = [
-    { title: 'Note 1', body: 'First Note' },
-    { title: 'Note 2', body: 'Second Note' },
-    { title: 'Note 3', body: 'Third Note' }
-]
+// const notes = [
+//             {title:'Note 1',body:'First Note'},
+//             {title:'Note 2',body:'Second Note'},
+//             {title:'Note 3',body:'Third Note'}
+//         ]
 
 // Query the DOM
 
@@ -14,9 +14,6 @@ const para = document.querySelectorAll('p')
 
 // Run forEach function for all elements and show the content of element
 
-para.forEach(function(p) {
-    console.log(p.textContent)
-})
 
 
 // Add Click event for button
@@ -63,9 +60,27 @@ document.getElementById('AddNoteForm').addEventListener('submit', function(addNo
     newNote.textContent = newNoteText
 
     // Show the newly created element
-    // const container = document.querySelector('body').appendChild(newNote) // creates a new paragraph in the body and puts in the text content
-    // container.appendChild(newNote) // creates a new checkbox in the body and puts in the text content
-    // container.appendChild(noteLabel);
+    document.querySelector('body').appendChild(newNote) // creates a new paragraph in the body and puts in the text content
+    container.appendChild(newNote) // creates a new checkbox in the body and puts in the text content
+    container.appendChild(noteLabel);
+    container.appendChild(br);
+
+    // Creating labels for checkboxes
+
+    // const carCheck = document.createElement('input');
+    // carCheck.type = 'checkbox';
+    // carCheck.id = 'car';
+    // carCheck.name = 'interest';
+    // carCheck.value = 'car';
+ 
+    // const carLabel = document.createElement('label')
+    // carLabel.htmlFor = 'car';
+    // carLabel.appendChild(document.createTextNode('Car'));
+ 
+    
+    // const container = document.querySelector('body');
+    // container.appendChild(carCheck);
+    // container.appendChild(carLabel);
     // container.appendChild(br);
 
     const renderNotes = function(notes) {

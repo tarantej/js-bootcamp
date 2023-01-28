@@ -1,10 +1,10 @@
 // Objects in Array
 
-// const notes = [
-//             {title:'Note 1',body:'First Note'},
-//             {title:'Note 2',body:'Second Note'},
-//             {title:'Note 3',body:'Third Note'}
-//         ]
+const notes = [
+            {title:'Note 1',body:'First Note'},
+            {title:'Note 2',body:'Second Note'},
+            {title:'Note 3',body:'Third Note'}
+        ]
 
 // Query the DOM
 
@@ -14,6 +14,9 @@ const para = document.querySelectorAll('p')
 
 // Run forEach function for all elements and show the content of element
 
+para.forEach(function(p) {
+    console.log(p.textContent)
+})
 
 
 // Add Click event for button
@@ -38,18 +41,18 @@ document.getElementById('AddNoteForm').addEventListener('submit', function(addNo
     // Show input box value
 
     const newNoteText = addNoteEvent.target.elements.AddNoteInput.value
-        //  const newNote = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
+    const newNote = document.createElement('p') //  Does not actually create an element in HTML but creates a reference for it
 
     // Change p to checkbox
-    const newNote = document.createElement('input')
-    newNote.type = 'checkbox';
-    newNote.id = 'noteCheck';
-    newNote.name = 'noteCheck';
-    newNote.value = newNoteText;
+    // const newNote = document.createElement('input')
+    // newNote.type = 'checkbox';
+    // newNote.id = 'noteCheck';
+    // newNote.name = 'noteCheck';
+    // newNote.value = newNoteText;
 
-    const noteLabel = document.createElement('label')
-    noteLabel.htmlFor = newNoteText;
-    noteLabel.appendChild(document.createTextNode(newNoteText));
+    // const noteLabel = document.createElement('label')
+    // noteLabel.htmlFor = newNoteText;
+    // noteLabel.appendChild(document.createTextNode(newNoteText));
 
     const br = document.createElement('br');
 
@@ -61,9 +64,9 @@ document.getElementById('AddNoteForm').addEventListener('submit', function(addNo
 
     // Show the newly created element
     document.querySelector('body').appendChild(newNote) // creates a new paragraph in the body and puts in the text content
-    container.appendChild(newNote) // creates a new checkbox in the body and puts in the text content
-    container.appendChild(noteLabel);
-    container.appendChild(br);
+    // container.appendChild(newNote) // creates a new checkbox in the body and puts in the text content
+    // container.appendChild(noteLabel);
+    // container.appendChild(br);
 
     // Creating labels for checkboxes
 
